@@ -32,7 +32,7 @@ public class Menu{
         Boolean bool= true;
 
         // archivos.loadInicio("D:\\Descargas\\admin.txt", usuarioContra);
-        Archivos.leerArc("D:\\Descargas\\admin.txt",3);
+        Archivos.leerArc("D:\\IntelliJ IDEA Community Edition 2022.2.1\\ProyectosOwO\\ConsultorioC\\db\\admin.txt",3);
 
         //Iterar map para ver los admins actuales
         for (Map.Entry<String, String> entry : usuarioContra.entrySet()) {
@@ -99,7 +99,7 @@ public class Menu{
 
         while (b){
             System.out.println(("Ingresa el id"));
-            id = sc.nextLine().toLowerCase();//5
+            id = sc.nextLine().toLowerCase();
 
             if(validarId(id,arrayList,user)){
                 b= false;
@@ -122,7 +122,7 @@ public class Menu{
                     case 2:
                         while(bol) {
                             System.out.println(("Ingresa id del doctor"));
-                            idD = sc.nextLine().toLowerCase();//98
+                            idD = sc.nextLine().toLowerCase();
 
                             if (!validarId(idD, Doctor.doctors, 0)) {
                                 while (bol){
@@ -163,7 +163,6 @@ public class Menu{
         Boolean b=true;
         String a;
 
-        System.out.println(arrayList.size());
         for (int i = 0; i< arrayList.size(); i++){
             if(user==0){
                 a= Doctor.doctors.get(i).id;
@@ -173,9 +172,9 @@ public class Menu{
                 //Cambiara  cita
                 a= Cita.cita.get(i).id;
             }
-            System.out.println(str+ " es igual a " + a);
+
             if(str.equals(a)){
-                System.out.println("Id existente");
+                mensaje("Id existente");
                 b=false;
             }
         }

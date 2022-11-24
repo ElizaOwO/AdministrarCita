@@ -3,19 +3,6 @@ import java.util.*;
 import java.util.List;
 
 public class Archivos {
-    public static void guardarArc(String ruta, ArrayList arrayList){
-        try {
-            PrintWriter writer = new PrintWriter(ruta, "UTF-8");
-            int longitud = arrayList.size();
-
-            for (int i = 0; i < longitud; i++) {
-                writer.write(arrayList.get(i).toString() + "\n");
-            }
-            writer.close();
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     public static void leerArc(String ruta, int usuario){
         String linea="0";
@@ -45,7 +32,6 @@ public class Archivos {
         } catch (Exception e) {
             e.printStackTrace();
             try {
-                // A partir del objeto File creamos el fichero físicamente
                 if (fichero.createNewFile())
                     System.out.println("El fichero se ha creado correctamente");
                 else
@@ -53,6 +39,20 @@ public class Archivos {
             } catch (IOException ioe) {
                 ioe.printStackTrace();
             }
+        }
+    }
+
+    public static void guardarArc(String ruta, ArrayList arrayList){
+        try {
+            PrintWriter writer = new PrintWriter(ruta, "UTF-8");
+            int longitud = arrayList.size();
+
+            for (int i = 0; i < longitud; i++) {
+                writer.write(arrayList.get(i).toString() + "\n");
+            }
+            writer.close();
+        }catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
