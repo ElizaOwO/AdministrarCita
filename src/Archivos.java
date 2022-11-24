@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.*;
 import java.util.List;
 
@@ -18,10 +16,13 @@ public class Archivos {
             e.printStackTrace();
         }
     }
+
     public static void leerArc(String ruta, int usuario){
         String linea="0";
         List<String> parts = new ArrayList<>();
         String palabras[];
+
+        File fichero = new File (ruta);
 
         try {
             FileReader lectura = new FileReader(ruta);
@@ -43,6 +44,15 @@ public class Archivos {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            try {
+                // A partir del objeto File creamos el fichero físicamente
+                if (fichero.createNewFile())
+                    System.out.println("El fichero se ha creado correctamente");
+                else
+                    System.out.println("No ha podido ser creado el fichero");
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+            }
         }
     }
 }

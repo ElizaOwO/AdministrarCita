@@ -15,7 +15,7 @@ public class Cita implements Administrar{
 
     @Override
     public void leerArchivo() {
-        Archivos.leerArc("D:\\Descargas\\cita.txt",2);
+        Archivos.leerArc("D:\\IntelliJ IDEA Community Edition 2022.2.1\\ProyectosOwO\\ConsultorioC\\db\\cita.txt",2);
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Cita implements Administrar{
 
     @Override
     public void guardarArchivo() {
-        Archivos.guardarArc("D:\\Descargas\\cita.txt",cita);
+        Archivos.guardarArc("D:\\IntelliJ IDEA Community Edition 2022.2.1\\ProyectosOwO\\ConsultorioC\\db\\cita.txt",cita);
     }
 
     @Override

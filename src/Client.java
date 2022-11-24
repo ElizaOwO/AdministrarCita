@@ -13,7 +13,7 @@ public class Client implements Administrar {
 
     @Override
     public void leerArchivo() {
-        Archivos.leerArc("D:\\Descargas\\cliente.txt",1);
+        Archivos.leerArc("D:\\IntelliJ IDEA Community Edition 2022.2.1\\ProyectosOwO\\ConsultorioC\\db\\cliente.txt",1);
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Client implements Administrar {
     }
     @Override
     public void guardarArchivo() {
-        Archivos.guardarArc("D:\\Descargas\\cliente.txt",cliente);
+        Archivos.guardarArc("D:\\IntelliJ IDEA Community Edition 2022.2.1\\ProyectosOwO\\ConsultorioC\\db\\cliente.txt",cliente);
     }
 
     @Override

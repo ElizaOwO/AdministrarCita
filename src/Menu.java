@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class Menu{
-
     static String opcion;
     static Scanner sc = new Scanner(System.in);
     static Scanner sci = new Scanner(System.in);
@@ -32,7 +31,7 @@ public class Menu{
         Boolean bool= true;
 
         // archivos.loadInicio("D:\\Descargas\\admin.txt", usuarioContra);
-        Archivos.leerArc("D:\\Descargas\\admin.txt",3);
+        Archivos.leerArc("D:\\IntelliJ IDEA Community Edition 2022.2.1\\ProyectosOwO\\ConsultorioC\\db\\admin.txt",3);
 
         //Iterar map para ver los admins actuales
         for (Map.Entry<String, String> entry : usuarioContra.entrySet()) {
@@ -131,15 +130,15 @@ public class Menu{
 
                                     if (!validarId(idC, Client.cliente, 1)) {
                                         bol=false;
-                                        System.out.println("Ingresa el dia");
+                                        mensaje("Ingresa el dia");
                                         dia= sci.nextInt();
-                                        System.out.println("Ingresa el mes");
+                                        mensaje("Ingresa el mes");
                                         mes= sci.nextInt();
-                                        System.out.println("Ingresa el año");
+                                        mensaje("Ingresa el año");
                                         anio= sci.nextInt();
-                                        System.out.println("Ingresa la hora");
+                                        mensaje("Ingresa la hora");
                                         hora= sci.nextInt();
-                                        System.out.println("Ingresa el minuto");
+                                        mensaje("Ingresa el minuto");
                                         minuto= sci.nextInt();
                                         mensaje("Ingresa motivo de cita");
                                         motivo= sc.nextLine();
@@ -173,9 +172,8 @@ public class Menu{
                 //Cambiara  cita
                 a= Cita.cita.get(i).id;
             }
-            System.out.println(str+ " es igual a " + a);
             if(str.equals(a)){
-                System.out.println("Id existente");
+                mensaje("Id existente");
                 b=false;
             }
         }
