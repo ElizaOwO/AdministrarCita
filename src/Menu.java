@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class Menu{
-
     static String opcion;
     static Scanner sc = new Scanner(System.in);
     static Scanner sci = new Scanner(System.in);
@@ -32,7 +31,7 @@ public class Menu{
         Boolean bool= true;
 
         // archivos.loadInicio("D:\\Descargas\\admin.txt", usuarioContra);
-        Archivos.leerArc("D:\\Descargas\\admin.txt",3);
+        Archivos.leerArc("D:\\IntelliJ IDEA Community Edition 2022.2.1\\ProyectosOwO\\ConsultorioC\\db\\admin.txt",3);
 
         //Iterar map para ver los admins actuales
         for (Map.Entry<String, String> entry : usuarioContra.entrySet()) {
