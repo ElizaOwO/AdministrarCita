@@ -130,15 +130,15 @@ public class Menu{
 
                                     if (!validarId(idC, Client.cliente, 1)) {
                                         bol=false;
-                                        System.out.println("Ingresa el dia");
+                                        mensaje("Ingresa el dia");
                                         dia= sci.nextInt();
-                                        System.out.println("Ingresa el mes");
+                                        mensaje("Ingresa el mes");
                                         mes= sci.nextInt();
-                                        System.out.println("Ingresa el año");
+                                        mensaje("Ingresa el año");
                                         anio= sci.nextInt();
-                                        System.out.println("Ingresa la hora");
+                                        mensaje("Ingresa la hora");
                                         hora= sci.nextInt();
-                                        System.out.println("Ingresa el minuto");
+                                        mensaje("Ingresa el minuto");
                                         minuto= sci.nextInt();
                                         mensaje("Ingresa motivo de cita");
                                         motivo= sc.nextLine();
@@ -172,9 +172,8 @@ public class Menu{
                 //Cambiara  cita
                 a= Cita.cita.get(i).id;
             }
-            System.out.println(str+ " es igual a " + a);
             if(str.equals(a)){
-                System.out.println("Id existente");
+                mensaje("Id existente");
                 b=false;
             }
         }
